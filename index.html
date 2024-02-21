@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paprika Pizzeria!</title>
+    <title>Paprika</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/build/css/normalize.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
-<body>
+<body id="inicio">
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <span>SVG</span>
+            <nav class="navegacion-principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#galeria">Galeria</a>
+            </nav>
+        </div>
+
+    </header>
     
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h1>Pizzeria Paprika</h1>
+                <p>La mejor pizza de la ciudad</p>
+            </div>
+        </div>
+        <video autoplay loop muted >
+            <source src="build/video/PizzaHD.mp4" type="video/mp4">
+            <source src="/build/video/PizzaHD.webm" type="video/webm">
+            <source>
+        </video>
+
+    </div>
+
+    <section id="galeria" class="galeria contenedor">
+        <h2>Nuestras pizzas !!</h2>
+        <ul class="galeria-imagenes"></ul>
+    </section>
+
+    <footer class="site-footer">
+        <p>Paprika Corporate, S.A</p>
+    </footer>
+
+    <script src="/build/js/app.js"></script>
 </body>
 </html>
