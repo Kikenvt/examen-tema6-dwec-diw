@@ -1,3 +1,7 @@
+// @Author: Enrique Fernández - Campoamor Fernández
+// @Github:
+
+
 document.addEventListener("DOMContentLoaded", function () {
   crearGaleria()
   scrollNav()
@@ -63,6 +67,7 @@ function scrollNav() {
     }))
 }
 
+//TODO: Funcion fixedNav
 function fixedNav(){
-    
+
 }
