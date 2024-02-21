@@ -1,9 +1,9 @@
 // @Author: Enrique Fernández - Campoamor Fernández
 // @Github:
 
-
 document.addEventListener("DOMContentLoaded", function () {
   crearGaleria()
+  fixedNav()
   scrollNav()
 })
 
@@ -56,18 +56,33 @@ function mostrarImagen(i) {
 }
 
 function scrollNav() {
-    const enlaces = document.querySelectorAll('.navegacion-principal a')
+  const enlaces = document.querySelectorAll(".navegacion-principal a")
 
-    enlaces.forEach(enlace => enlace.addEventListener('click', function(e){
-        e.preventDefault
-        const sectionScroll = e.target.attributes.href.value;
-        const section = document.querySelector(sectionScroll)
-        section.scrollIntoView({ behavior: "smooth"});
-
-    }))
+  enlaces.forEach((enlace) =>
+    enlace.addEventListener("click", function (e) {
+      e.preventDefault
+      const sectionScroll = e.target.attributes.href.value
+      const section = document.querySelector(sectionScroll)
+      section.scrollIntoView({ behavior: "smooth" })
+    })
+  )
 }
 
-//TODO: Funcion fixedNav
-function fixedNav(){
+function fixedNav() {
+  const barra = document.querySelector(".header")
+  const video = document.querySelector(".video")
+  const body = document.querySelector("body")
 
+  window.addEventListener("scroll", function () {
+    if (
+      video.getBoundingClientRect().bottom < 0 &&
+      this.window.innerWidth >= 768
+    ) {
+      barra.classList.add("fijo")
+      body.classList.add("body-scroll")
+    } else {
+      barra.classList.remove("fijo")
+      body.classList.remove("body-scroll")
+    }
+  })
 }
