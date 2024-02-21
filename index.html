@@ -47,3 +47,28 @@
     <script src="/build/js/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+    
+
+
+function navegacionFija() {
+    const barra = document.querySelector('.header');
+    const video = document.querySelector('.video');
+    const body = document.querySelector('body');
+
+
+    window.addEventListener('scroll', function() {
+        if( video.getBoundingClientRect().bottom < 0 && this.window.innerWidth >= 768 ) {
+            barra.classList.add('fijo');
+            body.classList.add('body-scroll');
+        } else {
+            barra.classList.remove('fijo');
+            body.classList.remove('body-scroll');
+        }
+    });
+}
