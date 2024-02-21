@@ -1,5 +1,5 @@
 // @Author: Enrique Fernández - Campoamor Fernández
-// @Github:
+// @Github: https://github.com/Kikenvt/examen-tema6-dwec-diw
 
 document.addEventListener("DOMContentLoaded", function () {
   crearGaleria()
